@@ -22,13 +22,15 @@ function connect() {
             showGreeting(JSON.parse(greeting.body).content);
         });
 
-        var suffix = frame.headers['queue-suffix'];
-        console.log("Queue suffix: " + suffix);
+        /*
+         var suffix = frame.headers['queue-suffix'];
+         console.log("Queue suffix: " + suffix);
 
 
-        stompClient.subscribe("/topic/justForMe" + suffix, function(msg) {
-            console.log("This message was just for me:" + msg);
-        });
+         stompClient.subscribe("/topic/justForMe" + suffix, function(msg) {
+         console.log("This message was just for me:" + msg);
+         });
+         */
     });
 }
 
